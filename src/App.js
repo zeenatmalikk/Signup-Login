@@ -1,15 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-import { Signup } from './screens/Signup';
+import logo from "./logo.svg";
+import "./App.css";
 
-
+import { Signup1 } from "./screens/Signup1";
+import { Loginpg } from "./screens/Loginpg";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
-    <div >
-   <Signup/>
-
-    </div>
+    <Router>
+      <div>
+      <Switch>
+        <Route path="/signup">
+          <Signup1/>
+        </Route>
+      </Switch>
+      <Switch>
+        <Route path="/login">
+          <Loginpg/>
+        </Route>
+        </Switch>
+        </div>
+    </Router>
   );
 }
 
